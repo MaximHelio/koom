@@ -17,9 +17,9 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
 function handleConnection(socket){
-  console.log(socket)
+  console.log(socket) // socket 내용이 출력되면, connection 이벤트가 발생한 것.
 }
 
-wss.on("connection", handleConnection)
+wss.on("connection", handleConnection)  // socket 확인하려면 connection 이벤트가 발생해야함
 
 server.listen(3000, handleListen);
